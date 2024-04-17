@@ -1,0 +1,136 @@
+/* Import Google Font */
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap');
+
+/* Reset some default styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+}
+
+
+/* Set base font and background */
+
+body,
+html {
+    height: 100%;
+    background: #eceff1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* Prevent scrolling */
+}
+
+
+/* Login container styles */
+
+.login-container {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    transition: transform 0.3s ease-in-out;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #bdbdbd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.2s ease-in-out;
+}
+
+.input-group input::placeholder {
+    color: #999999;
+    /* Placeholder text color */
+}
+
+.input-group input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
+}
+
+
+/* Styles specific to SweetAlert2 */
+
+.swal2-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1060;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+body.swal2-shown {
+    overflow-y: hidden !important;
+}
+
+.swal2-popup {
+    margin: auto;
+}
+
+
+/* Responsive adjustments */
+
+@media (max-width: 400px) {
+    .login-container {
+        width: auto;
+        padding: 20px;
+        margin: 20px;
+    }
+}
+
+@media (min-width: 601px) {
+    .login-container {
+        width: 450px;
+        /* Slightly larger container for larger screens */
+    }
+}
